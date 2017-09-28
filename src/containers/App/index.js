@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, PropTypes } from 'react';
 
-class App extends Component {
+// Import Components
+import SearchBar from '../SearchBar';
+
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <div className="row">
+          <div className="col s12">
+            <div className="header-styles">
+              <h1 className="pageTitle">Investorapp</h1>
+            </div>
+
+            <div className="col l4 m12 s12 left-side">
+              <SearchBar/>
+            </div>
+
+            <div className="col l7 push-l1 m12 s12 right-side">
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
-
-export default App;
